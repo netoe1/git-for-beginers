@@ -2,9 +2,8 @@
 #include <stdlib.h>
 #include <locale.h>
 #include <string.h>
-#include <sys/stat.h>
 
-#define USAGE "Usage : <program> <operation> <repo>"
+#define USAGE "Usage : <program> <operation>"
 #define EXIT -1
 #define SUCCESS 0
 #define UPDATE_LONG "--update"
@@ -21,38 +20,31 @@
     \n\nPS:Make sure you leave the program binary in the same git repository folder.\n")
 
 #define INVALID_USAGE() \
-    puts("Type <program> --help or -h, to see valid commands!");
+    puts("ERROR: Type <program> --help or -h, to see valid commands!");
 static int op = 0;
 
 int main(int argc, char **argv)
 {
-    const char *folder;
-    folder = "./git";
-    struct stat sb;
-
-    if (!(stat(folder, &sb) == 0 && S_ISDIR(sb.st_mode)))
-    {
-        puts("ERROR: This doesn't is a git repository.");
-    }
-
-    if (argc != 3)
+    if (argc != 1)
     {
         if (argv[1] == NULL)
         {
             return EXIT;
         }
         if (
-            (strcmp(argv[1], UPDATE_SHORT) == 0 || strcmp(argv[1], UPDATE_LONG) == 0) && (argv[2] != NULL))
+            (strcmp(argv[1], UPDATE_SHORT) == 0 || strcmp(argv[1], UPDATE_LONG) == 0))
         {
             GIT_UPDATE();
             return SUCCESS;
         }
         else if (
-            (strcmp(argv[1], HELP_LONG) == 0 || strcmp(argv[1], HELP_SHORT) == 0) && (argv[2] == NULL))
+            (strcmp(argv[1], HELP_LONG) == 0 || strcmp(argv[1], HELP_SHORT) == 0))
         {
             HELP_CLI();
             return SUCCESS;
         }
     }
-    return SUCCESS;
+
+    INVALID_USAGE();
+    return EXIT;
 }
