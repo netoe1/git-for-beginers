@@ -21,7 +21,6 @@
 
 #define INVALID_USAGE() \
     puts("ERROR: Type <program> --help or -h, to see valid commands!");
-static int op = 0;
 
 int main(int argc, char **argv)
 {
