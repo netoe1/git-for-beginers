@@ -20,7 +20,7 @@
     \n\nPS:Make sure you leave the program binary in the same git repository folder.\n")
 
 #define INVALID_USAGE() \
-    puts("ERROR: Type <program> --help or -h, to see valid commands!");
+    puts("ERROR: Type <program> --help or -h, to see valid commands!")
 
 int main(int argc, char **argv)
 {
