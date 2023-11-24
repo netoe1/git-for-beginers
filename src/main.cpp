@@ -5,44 +5,49 @@
 #include <locale>
 
 using namespace std;
-#define CLONEREPO "git clone %s"
-#define COMMITREPO "git commit -m \"Commited with beginners script\""
-#define ADDREPO "git add --all"
-#define PUSHREPO "git push origin main"
-#define PULLREPO "git pull"
-#define USAGEMSG "Usage : <program> <operation> <repo>"
+#define CLONE "git clone %s"
+#define COMMIT "git commit -m \"Commited with beginners script\""
+#define ADD "git add --all"
+#define PUSH "git push origin main"
+#define PULL "git pull"
+#define USAGE "Usage : <program> <operation> <repo>"
 #define EXIT -1
 #define SUCCESS 0
 
-typedef enum op
+#define UPDATE_LONG "--update"
+#define UPDATE_SHORT "-up"
+#define HELP_LONG "--help"
+#define HELP_SHORT "-h"
+
+/*
+    OPERATIONS:
+    update -> PULL,ADD, COMMIT, PUSH
+    help -> help
+*/
+
+typedef enum CLI_OP
 {
-    PULL,
-    ADD,
-    PUSH,
-    CLONE,
-    COMMIT
-} Operation;
+    UPDATE,
+    HELP
+};
+
+typedef struct map
+{
+    int cod;
+    char *flag;
+} Map;
 
 static int op = 0;
 
-void defineOp(char ***argv)
-{
+const Map flags[] = {
+    {UPDATE, "--update"}};
 
-    if (NULL == argv ||
-        NULL == *argv)
-    {
-        puts("A operação que você quer fazer não é válida.");
-        return;
-    }
-
-    if (strcmp(*argv[1], "--operation") == 0)
-}
 int main(int argc, char **argv)
 {
     if (argc != 3)
     {
-
-        return EXIT;
+        if ()
+            return EXIT;
     }
     return SUCCESS;
 }
