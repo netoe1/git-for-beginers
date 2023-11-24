@@ -1,6 +1,17 @@
-main.o: ./src/main.c
-	gcc -o ./bin/linux/main ./src/main.c
 
+#dot.o files
+
+scripts.o: ./src/scripts.c
+	gcc -c ./src/scripts.c -o ./bin/lib/scripts
+
+functions.o: ./src/functions.c ./include/functions.h
+	gcc -o ./bin/lib/functions ./src/functions.c
+
+main.o: ./src/main.c
+	gcc -o ./bin/linux/main ./src/main.c ./bin/lib/scripts
+
+
+#make ready
 makeAndRun:./src/main.c
 	gcc -o ./bin/main ./src/main.c
 	./bin/main
@@ -13,3 +24,7 @@ makeForWindows64bits:./src/main.c
 
 all:
 	make makeForWindows32bits makeForWindows64bits main.o
+
+clean:
+	rm -rf ./bin/lib/*.0
+	rm -rf ./bin/linux/*.0
