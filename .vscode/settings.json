@@ -1,0 +1,6 @@
+{
+  "files.associations": {
+    "clifn.h": "c",
+    "stddef.h": "c"
+  }
+}

@@ -10,7 +10,6 @@ functions.o: ./src/functions.c ./include/functions.h
 main.o: ./src/main.c
 	gcc -o ./bin/linux/main ./src/main.c ./bin/lib/scripts
 
-
 #make ready
 makeAndRun:./src/main.c
 	gcc -o ./bin/main ./src/main.c

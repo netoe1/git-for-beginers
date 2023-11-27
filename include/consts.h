@@ -1,5 +1,6 @@
-#ifndef CLIFN_H
-#define CLIFN_H
+#ifndef CONSTS_H
+#define CONSTS_H
+
 #define USAGE_MESSAGE "Usage : <program> <operation>"
 #define EXIT -1
 #define SUCCESS 0
@@ -9,4 +10,8 @@
 #define HELP_SHORT "-h"
 #define UPDATE_BRANCH_LONG "--update-branch"
 #define UPDATE_BRANCH_SHORT "-ub"
+
+//  Environment variables
+#define BUF_MAX 256
+#define import extern
 #endif

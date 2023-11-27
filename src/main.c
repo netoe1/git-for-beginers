@@ -3,9 +3,8 @@
 #include <locale.h>
 #include <string.h>
 
-// External tools
 #include "../include/functions.h"
-#include "../include/clifn.h"
+#include "./include/consts.h"
 
 #define label argv[2]
 #define operation argv[1]
