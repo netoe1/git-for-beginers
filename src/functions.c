@@ -1,12 +1,11 @@
-#include "../include/functions.h"
-#include "./src/scripts.c"
 #include <stdio.h>
 #include <stdlib.h>
 #include <stddef.h>
 
+#include "functions.h"
+#include "scripts.c"
 extern SCRIPT_UPDATE_BY_BRANCH;
 extern SCRIPT_UPDATE_MAIN;
-
 void gitUpdateBranch(char *branch)
 {
     char buffer[BUF_MAX];

@@ -1,13 +1,9 @@
 #ifndef FUNCTIONS_H
 #define FUNCTIONS_H
 
-#include "./consts.h"
-#include "../src/scripts.c"
+#include "consts.h"
+#include "scripts.c"
 #define USE_MACROS 0
-
-// Importing define's
-extern SCRIPT_UPDATE_BY_BRANCH;
-extern SCRIPT_UPDATE_MAIN;
 
 void gitUpdate();
 void gitUpdateBranch(char *branch);
@@ -27,5 +23,6 @@ void gitUpdateBranch(char *branch);
 
 void gitUpdateBranch(char *branch);
 void gitUpdate();
+
 #endif
 #endif

@@ -24,6 +24,8 @@ makeForWindows64bits:./src/main.c
 all:
 	make makeForWindows32bits makeForWindows64bits main.o
 
+linux_run:
+	./bin/linux/main
 clean:
 	rm -rf ./bin/lib/*.0
 	rm -rf ./bin/linux/*.0
