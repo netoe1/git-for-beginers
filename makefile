@@ -1,16 +1,18 @@
 
 #dot.o files
 
-scripts.o: ./src/scripts.c
-	gcc -c ./src/scripts.c -o ./bin/lib/scripts
+#scripts.o: ./src/scripts.c
+#	gcc -c ./src/scripts.c -o ./bin/lib/scripts
 
 functions.o: ./src/functions.c ./src/functions.h ./bin/lib/scripts 
-	gcc -o ./bin/lib/functions ./src/functions.c ./bin/lib/scripts 
+	gcc -o./bin/lib/functions -c ./src/functions.c 
+
+cli.o: ./src/cli.h ./src/cli.c
+	gcc -o ./src/cli.h ./src/cli.c
 
 main.o: ./src/main.c
-	gcc -o ./bin/linux/main ./src/main.c ./bin/lib/scripts
+	gcc -o ./bin/linux/main ./src/main.c ./bin/lib/functions ./bin/lib/cli
 
-#make ready
 makeAndRun:./src/main.c
 	gcc -o ./bin/main ./src/main.c
 	./bin/main

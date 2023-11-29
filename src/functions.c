@@ -3,7 +3,7 @@
 #include <stddef.h>
 
 #include "functions.h"
-#include "scripts.c"
+
 void gitUpdateBranch(char *branch)
 {
     char buffer[BUF_MAX];

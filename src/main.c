@@ -27,7 +27,7 @@ int main(int argc, char **argv)
         else if (
             (strcmp(operation, HELP_LONG) == SUCCESS || strcmp(operation, HELP_SHORT) == SUCCESS))
         {
-            git_help();
+            cli_help();
             return SUCCESS;
         }
         else if ((strcmp(operation, UPDATE_BRANCH_LONG) == SUCCESS || strcmp(operation, UPDATE_BRANCH_SHORT) == SUCCESS) &&

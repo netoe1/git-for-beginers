@@ -14,4 +14,6 @@
 //  Environment variables
 #define BUF_MAX 256
 #define import extern
+//  Git Strings!
+#define GIT_PULL "git pull"
 #endif
