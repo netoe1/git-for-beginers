@@ -4,8 +4,6 @@
 
 #include "functions.h"
 #include "scripts.c"
-extern SCRIPT_UPDATE_BY_BRANCH;
-extern SCRIPT_UPDATE_MAIN;
 void gitUpdateBranch(char *branch)
 {
     char buffer[BUF_MAX];

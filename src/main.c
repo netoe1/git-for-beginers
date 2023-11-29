@@ -37,6 +37,5 @@ int main(int argc, char **argv)
         }
     }
 
-    INVALID_USAGE();
     return EXIT;
 }

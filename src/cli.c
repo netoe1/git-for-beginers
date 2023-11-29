@@ -8,3 +8,8 @@ void cli_help()
     \n\tUPDATE: <program> --update OR <program> -up \tTo update your git repository.\
     \n\nPS:Make sure you leave the program binary in the same git repository folder.\n");
 }
+
+void cli_invalid_usage()
+{
+    puts("ERROR: Type <program> --help or -h, to see valid commands!");
+}
