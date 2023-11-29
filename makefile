@@ -13,6 +13,8 @@ cli.o: ./src/cli.h ./src/cli.c
 main.o: ./src/main.c
 	gcc -o ./bin/linux/main ./src/main.c ./bin/lib/functions ./bin/lib/cli
 
+linux_all:
+	gcc -o ./bin/lib/main ./src/cli.c ./src/functions.c ./src/main.c
 makeAndRun:./src/main.c
 	gcc -o ./bin/main ./src/main.c
 	./bin/main
@@ -26,8 +28,6 @@ makeForWindows64bits:./src/main.c
 all:
 	make makeForWindows32bits makeForWindows64bits main.o
 
-linux_all:
-	make scripts.o functions.o main.o
 clean:
 	rm -rf ./bin/lib/*.0
 	rm -rf ./bin/linux/*.0

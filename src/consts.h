@@ -16,4 +16,7 @@
 #define import extern
 //  Git Strings!
 #define GIT_PULL "git pull"
+#define GIT_ADD "git add --all"
+#define GIT_COMMIT "git commit -m \"updated with git-for-beginners\""
+#define GIT_PUSH "git push"
 #endif
