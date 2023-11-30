@@ -14,20 +14,13 @@ main.o: ./src/main.c
 	gcc -o ./bin/linux/main ./src/main.c ./bin/lib/functions ./bin/lib/cli
 
 linux_all:
-	gcc -o ./bin/lib/main ./src/cli.c ./src/functions.c ./src/main.c
-makeAndRun:./src/main.c
-	gcc -o ./bin/main ./src/main.c
-	./bin/main
+	gcc -o ./bin/linux/gitBeginner ./src/cli.c ./src/functions.c ./src/main.c
 
-makeForWindows32bits:./src/main.c
-	i686-w64-mingw32-gcc -o ./bin/windows/main32.exe ./src/main.c
+windows32_all:
+	i686-w64-mingw32-gcc -o ./bin/windows/32bits/gitBeginner ./src/cli.c ./src/functions.c ./src/main.c
 
-makeForWindows64bits:./src/main.c
-	i686-w64-mingw32-gcc -o ./bin/windows/main.exe ./src/main.c
-
-all:
-	make makeForWindows32bits makeForWindows64bits main.o
-
-clean:
-	rm -rf ./bin/lib/*.0
-	rm -rf ./bin/linux/*.0
+windows64_all:
+	x86_64-w64-mingw32-gcc -o ./bin/windows/64bits/gitBeginner ./src/cli.c ./src/functions.c ./src/main.c
+clean_all:
+	rm -rf ./bin/lib/*
+	rm -rf ./bin/linux/*

@@ -37,5 +37,8 @@ int main(int argc, char **argv)
         }
     }
 
+    puts("ERROR:gitBeginner:\nIt seems that you called the program, but did not inform the CLI function.\
+            \nType <program> --help or <program> -h to see available commands.");
+
     return EXIT;
 }
