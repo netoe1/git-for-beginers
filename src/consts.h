@@ -19,4 +19,10 @@
 #define GIT_ADD "git add --all"
 #define GIT_COMMIT "git commit -m \"updated with git-for-beginners\""
 #define GIT_PUSH "git push"
+#define GIT_CONFIG_USERNAME_SESSION "git config user.name \"%s\""
+#define GIT_CONFIG_EMAIL_SESSION "git config user.email \"%s\""
+#define GIT_CONFIG_USERNAME_GLOBAL "git config --global user.name \"%s\""
+#define GIT_CONFIG_EMAIL_GLOBAL "git config --global user.email \"%s\""
+#define GIT_CONFIG_ACCOUNT_SESSION "git config user.name \"%s\" \ngit config user.email \"%s\""
+#define GIT_CONFIG_ACCOUNT_GLOBAL "git config --global user.name \"%s\"\ngit config --global user.email \"%s\""
 #endif

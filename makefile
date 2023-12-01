@@ -21,6 +21,8 @@ windows32_all:
 
 windows64_all:
 	x86_64-w64-mingw32-gcc -o ./bin/windows/64bits/gitBeginner ./src/cli.c ./src/functions.c ./src/main.c
+all:
+	make linux_all windows32_all windows64_all
 clean_all:
 	rm -rf ./bin/lib/*
 	rm -rf ./bin/linux/*
