@@ -9,6 +9,9 @@
 
 #define label argv[2]
 #define operation argv[1]
+#define flag argv[3]
+#define username argv[4]
+#define email argv[5]
 
 int main(int argc, char **argv)
 {
@@ -34,6 +37,14 @@ int main(int argc, char **argv)
                  (strcmp(operation, label)) == SUCCESS)
         {
             gitUpdateBranch(label); // This function already treat errors.
+        }
+        else if ((strcmp(operation, ACCOUNT_LONG) == 0 || strcmp(operation, ACCOUNT_SHORT) == 0))
+        {
+            // <program> account --global <username> <email>
+            if (label != NULL && flag != NULL && username != NULL && email != NULL)
+            {
+                gitConfigAccount(username, email, label);
+            }
         }
     }
 

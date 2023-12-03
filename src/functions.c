@@ -28,7 +28,7 @@ int gitConfig_account_userWillSaveDataOrNot()
     return saveData;
 }
 
-void gitConfigAccount(const char *username, const char *password, const char *operation)
+void gitConfigAccount(const char *username, const char *email, const char *operation)
 {
     if (username == NULL)
     {
@@ -36,7 +36,7 @@ void gitConfigAccount(const char *username, const char *password, const char *op
         return;
     }
 
-    if (password == NULL)
+    if (email == NULL)
     {
         puts(INVALID_SYNTAX_PASSWORD);
         return;

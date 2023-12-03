@@ -10,6 +10,10 @@
 #define HELP_SHORT "-h"
 #define UPDATE_BRANCH_LONG "--update-branch"
 #define UPDATE_BRANCH_SHORT "-ub"
+#define ACCOUNT_LONG "--account"
+#define ACCOUNT_SHORT "-a"
+#define GLOBAL_LONG "--global"
+#define SESSION_LONG "--session"
 
 //  Environment variables
 #define BUF_MAX 256

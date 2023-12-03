@@ -6,6 +6,7 @@
 
 void gitUpdate();
 void gitUpdateBranch(char *branch);
+void gitConfigAccount(const char *username, const char *password, const char *operation);
 
 #if USE_MACROS == 1
 #define GIT_UPDATE() \
